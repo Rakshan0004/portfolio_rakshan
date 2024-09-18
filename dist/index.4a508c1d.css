@@ -12417,15 +12417,15 @@ section {
 #hero {
   min-height: 100vh;
   height: 100vh;
-  color: #272341;
-  z-index: -1;
-  background: #fff;
+  color: #eaeaea;
+  background: url("backgroundimage.09aa7daf.jpg") center / cover;
   border-bottom: 0;
   align-items: center;
   margin-bottom: 0;
   padding: 0 5.6rem;
   font-weight: 400;
   display: flex;
+  position: relative;
   inset: 0;
 }
 
@@ -12435,8 +12435,23 @@ section {
   }
 }
 
+#hero:before {
+  content: "";
+  z-index: 0;
+  background: #00000080;
+  position: absolute;
+  inset: 0;
+}
+
+#hero .container {
+  z-index: 1;
+  position: relative;
+}
+
 #hero .hero-title {
   text-align: left;
+  color: #fff;
+  text-shadow: 2px 2px 8px #000c;
   margin-bottom: 3.2rem;
   font-size: 5.6rem;
   font-weight: 700;
@@ -12479,6 +12494,7 @@ section {
 }
 
 #hero .hero-cta a {
+  color: #fff;
   font-size: 2.4rem;
 }
 
@@ -12486,24 +12502,6 @@ section {
   #hero .hero-cta a {
     font-size: 2rem;
   }
-}
-
-#hero {
-  height: 100vh;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.hero-title {
-  margin-bottom: 20px;
-  font-size: 2.5rem;
-}
-
-.cta-btn--hero {
-  padding: 10px 20px;
-  font-size: 1.2rem;
 }
 
 #projects {
